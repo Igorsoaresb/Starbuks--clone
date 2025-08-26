@@ -51,13 +51,25 @@
 
     </div>
 
-    <div class="menu">
+   <div class="menu">
         <img src="./images/thumb1.png" class="botao-menu">
         <img src="./images/thumb2.png" class="botao-menu">
         <img src="./images/thumb3.png" class="botao-menu">
-
     </div>
 
+    <script>
+        // Seleciona a imagem principal
+        const mainImage = document.querySelector('.starbucks');
+        // Seleciona todas as imagens do menu
+        const menuButtons = document.querySelectorAll('.botao-menu');
+
+        // Adiciona evento de clique em cada imagem do menu
+        menuButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                mainImage.src = btn.src.replace('thumb', 'img');
+            });
+        });
+    </script>
 
 </body>
 
